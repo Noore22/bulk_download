@@ -11,7 +11,7 @@
             <input type="password" name="password" class="form-control" required>
         </div>
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="captcha">Captcha</label>
             <div>
                 <span>{!! captcha_img() !!}</span>
@@ -23,7 +23,7 @@
             @error('captcha')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
-        </div>
+        </div> --}}
 
         <button type="submit" class="btn btn-primary">Login</button>
     </form>

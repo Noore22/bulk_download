@@ -11,11 +11,10 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                     <div class="mt-4">
-                        <a href="{{ route('export.users.csv') }}" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-2xl shadow-md">
-                            ⬇️ Download Users CSV
-                        </a>                                                                                                          
-                    </div>                    
-                    
+                        <a href="{{ route('export-mi-report') }}" class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black font-semibold rounded-2xl shadow-lg transition duration-300 ease-in-out">
+                            ⬇️ Download mi_reports CSV
+                        </a>                                                                                    
+                    </div>                                     
                 </div>
             </div>
         </div>

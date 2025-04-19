@@ -43,10 +43,16 @@ Route::get('/dashboard', function () {
 
 // Route::get('/export-users-csv', [MiReportExport::class, 'exportLargeCSV'])->name('export.users.csv');
 
-Route::get('/export-users-csv', function () {
-    return (new \App\Exports\MiReportExport)->exportLargeCSV();
-})->name('export.users.csv');
+// Route::get('/export-users-csv', function () {
+//     return (new \App\Exports\MiReportExport)->exportLargeCSV();
+// })->name('export.users.csv');
 
+
+// Route::get('/export-mi-reports', [MiReportExport::class, 'streamCSV'])->name('export-mi-report');
+
+Route::get('/export-mi-reports', function (MiReportExport $export) {
+    return $export->streamCSV();
+})->name('export-mi-report');
 
 Route::get('/upload', function () {
     return view('livewire.file-upload');
